@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>视频演示系统</title>
+    <link href="doctor.css" rel="stylesheet">
+</head>
+</head>
+
+<body>
+    <header>
+        <h3>视频演示系统</h3>
+        <div class="doctor-wrap"><span class="doctor-name"></span><a id="modify-doctor" href="javascript:;">修改</a></div>
+    </header>
+    <div class="major">
+        <table>
+            <thead>
+                <tr>
+                    <th width="150">患者</th>
+                    <th width="240">所在医院</th>
+                    <th width="180">科室</th>
+                    <th width="150">所选专家</th>
+                    <th width="120">业务类型</th>
+                    <th width="150">预约时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody id="patients">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="vendor/jquery.min.js"></script>
+    <script src="doctor.js"></script>
+</body>
+
+</html>

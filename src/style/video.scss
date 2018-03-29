@@ -1,0 +1,129 @@
+.container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: #222;
+    overflow: hidden;
+    .other-video {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        z-index: 0;
+        .video-wrap {
+            position: relative;
+            height: 100%;
+            z-index: 1;
+            video {
+                height: 100%;
+            }
+            label {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                color: #FFF;
+                background: #09f;
+                padding: 5px 15px;
+                font-size: 24px;
+            }
+        }
+        &:after {
+            position: absolute;
+            content: '未连接';
+            top: 50%;
+            left: 50%;
+            margin-top: -50px;
+            margin-left: -90px;
+            color: #999;
+            font-size: 60px;
+            z-index: 0;
+        }
+    }
+    .own-video {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        z-index: 1;
+        width: 350px;
+        border-top: 1px solid #999;
+        border-left: 1px solid #999;
+        font-size: 0px;
+        .video-wrap {
+            position: relative;
+            width: 100%;
+            video {
+                width: 100%;
+            }
+        }
+    }
+    .video-wrap {
+        .right-top-toolbar {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            z-index: 0;
+        }
+        .audio-rate {
+            display: inline-block;
+            vertical-align: top;
+            ul {
+                display: inline-block;
+                margin: 0px 1px;
+                width: 10px;
+                padding: 0px;
+                li {
+                    display: block;
+                    width: 10px;
+                    height: 3px;
+                    margin: 1px 0px;
+                    &.active {
+                        background: yellowgreen;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.container .other-video .video-wrap video {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    height: auto;
+}
+
+.phone-body {
+    .container {
+        position: static;
+        overflow-y: auto;
+        #out-video-container {
+            margin-top: 30px;
+            label {
+                top: -30px;
+                width: 100%;
+                height: 30px;
+                font-size: 18px;
+                padding: 0px 15px;
+                line-height: 30px;
+            }
+        }
+        &>div {
+            width: 100%;
+            position: relative;
+            bottom: auto;
+            .video-wrap {
+                width: 100%;
+                video {
+                    width: 100%;
+                    position: static;
+                    top: auto;
+                    transform: translate(0, 0);
+                }
+            }
+        }
+    }
+}

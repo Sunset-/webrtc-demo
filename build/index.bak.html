@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sunset-WebRTC</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+</head>
+
+<body>
+    <div class="header">
+        房间号：
+        <input id="room-no" type="text" /> 我的昵称：
+        <input id="user-name" type="text" />
+        <button id="joinroom-btn" class="btn" type="button">进入房间</button>
+        <button id="leaveroom-btn" class="btn" type="button">离开房间</button>
+        <button id="share-btn" class="btn" type="button">共享辅流</button>
+        <a href="share-screen.crx" download="share-screen.crx">下载共享屏幕插件</a>
+    </div>
+    <div style="position:relative;">
+        <div class="video-major">
+            <div id="in-video-container" class="video-container">
+                <h3>我的输入</h3>
+            </div>
+            <div id="out-video-container" class="video-container">
+                <h3>我接收的</h3>
+            </div>
+        </div>
+        <div class="message-major">
+            <h3>消息列表</h3>
+            <div id="messages" class="messages"></div>
+            <div class="sendmessage-box">
+                <input id="send-message" type="text" name="" value=""><button id="send-trigger" class="btn" type="button">发送</button>
+            </div>
+        </div>
+    </div>
+    <script src="getScreen.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

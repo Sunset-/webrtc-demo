@@ -1,0 +1,195 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    height: 50px;
+    line-height: 50px;
+    background: #09f;
+    color: #FFF;
+    h3 {
+        margin-left: 15px;
+        font-weight: normal;
+        display: inline-block;
+    }
+    &>div {
+        float: right;
+        font-size: 14px;
+        padding-right: 10px;
+        a {
+            margin-left: 10px;
+            color: #FFF;
+        }
+    }
+}
+
+.form-container {
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    height: 210px;
+    font-size: 14px;
+    position: relative;
+    min-width: 1200px;
+    button {
+        width: 150px;
+        height: 40px;
+        font-size: 14px;
+        color: #FFF;
+        background: #09f;
+        border: 0px;
+        border-radius: 3px;
+        cursor: pointer;
+        &.orange {
+            background: orange;
+        }
+    }
+    .form {
+        padding-left: 10px;
+        &>div {
+            display: inline-block;
+            margin-top: 15px;
+            margin-right: 40px;
+            &>label {
+                display: inline-block;
+                width: 60px;
+            }
+            &>input {
+                width: 185px;
+                height: 30px;
+                padding-left: 5px;
+                box-sizing: border-box;
+            }
+        }
+    }
+    .videos {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        float: right;
+        &>div {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            border: 1px solid #999;
+            background: #222;
+            float: left;
+            margin-left: 15px;
+            overflow: hidden;
+            &:before {
+                position: absolute;
+                z-index: 2;
+                content: attr(name);
+                color: #FFF;
+                font-size: 12px;
+                background: #09f;
+                padding: 2px 5px;
+            }
+            &.doctor-video:before {
+                background: orange;
+            }
+            &:after {
+                position: absolute;
+                content: '未连接';
+                top: 50%;
+                left: 50%;
+                margin-top: -15px;
+                margin-left: -30px;
+                color: #999;
+                font-size: 20px;
+            }
+        }
+        .video-wrap {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            video {
+                width: 100%;
+                height: 100%;
+            }
+            label {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                color: #FFF;
+                background: #09f;
+                padding: 5px 15px;
+                font-size: 14px;
+            }
+            .right-top-toolbar {
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                z-index: 0;
+            }
+            .audio-rate {
+                display: inline-block;
+                vertical-align: top;
+                ul {
+                    display: inline-block;
+                    margin: 0px 1px;
+                    width: 10px;
+                    padding: 0px;
+                    li {
+                        display: block;
+                        width: 10px;
+                        height: 3px;
+                        margin: 1px 0px;
+                        &.active {
+                            background: yellowgreen;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.major {
+    padding: 10px;
+    table {
+        width: 100%;
+        border: 0px;
+        border-collapse: collapse;
+        thead {
+            background: #efefef;
+            tr {
+                height: 30px;
+                th {
+                    border: none;
+                    font-weight: normal;
+                    font-size: 14px;
+                    text-align: left;
+                    padding-left: 10px;
+                }
+            }
+        }
+        tbody {
+            tr {
+                height: 50px;
+                border-bottom: 1px dashed #ccc;
+                td {
+                    padding-left: 10px;
+                    &.status:before {
+                        content: '等待';
+                        color: orange;
+                    }
+                    &.status.doing:before {
+                        content: '进行中';
+                        color: yellowgreen;
+                    }
+                }
+            }
+            button {
+                font-size: 14px;
+                color: #FFF;
+                background: red;
+                border: 0px;
+                border-radius: 3px;
+                cursor: pointer;
+                padding: 5px 10px;
+            }
+        }
+    }
+}
